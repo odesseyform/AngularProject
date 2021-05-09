@@ -1,3 +1,4 @@
+import { typeWithParameters } from '@angular/compiler/src/render3/util';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefaultComponent implements OnInit {
 
+  sideBarOpen = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  sideBarToggler() {
+    this.sideBarOpen = !this.sideBarOpen;
   }
 
 }
