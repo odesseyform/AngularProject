@@ -1,15 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { DefaultComponent } from './layouts/default/default.component';
-import { TopComponent } from './top/top.component';
-
-// const routes: Routes = [
-//   { path: '', component: TopComponent },
-//   { path: 'dashboard', component: DashboardComponent },
-//   { path: 'top', component: TopComponent },
-//   // { path: '**', redirectTo: TopComponent },
-// ];
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { PostsComponent } from './modules/posts/posts.component';
 
 const routes: Routes = [{
   path: '',
@@ -17,7 +10,10 @@ const routes: Routes = [{
   children: [{
     path: '',
     component: DashboardComponent
-  }]
+  },{
+    path: 'posts',
+    component: PostsComponent,
+}]
 }];
 
 @NgModule({
